@@ -40,7 +40,6 @@ namespace Time
 		return uni(rng);
 	} // this falls perfectly under the average distribution curve or whatever its called.
 	void randSleep(int min, int max) {
-		const std::uniform_int_distribution<int> uni(min, max);
-		sleep(uni(rng));
+		sleep(getRandInt(min, max));
 	} // uses the same method as getRandInt() but for a sleep timer.
 }
